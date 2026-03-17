@@ -19,4 +19,13 @@ pub fn run(){
     // let x: u8 = 255;
     // let y = x +1; // This will cause a compile-time error due to overflow
     // println!("y: {}", y);
+
+    //Array cannot contain different types, but we can use a tuple to store different types of values
+    // let message = "The temperature today is:";
+    // let x = [message, 100];
+    // println!("{} {}", x[0], x[1]);
+
+    let t = ([1; 2], [3; 4]);
+    let (a, _b) = t;
+    println!("{}", a[0] + t.1[0]);
 }

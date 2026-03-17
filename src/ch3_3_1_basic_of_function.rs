@@ -58,3 +58,5 @@ fn add_without_semicolon(x: i32, y: i32) -> i32 {
 fn add_with_semicolon(x: i32, y: i32) -> i32 {
     return x + y;
 }
+
+// curly braces are used for expression and scope, they can be used to create a new scope and to group multiple statements together.
