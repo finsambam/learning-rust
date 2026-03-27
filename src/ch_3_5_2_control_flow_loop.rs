@@ -51,4 +51,40 @@ pub fn run() {
     }
 
     println!("LIFTOFF!!!");
+    println!("");
+
+    //while used to loop over th elements of a collection, such as an array
+    // it's more idiomatic to use a for loop, which we'll cover in the next section
+    let a = [10,20,30,40,50];
+    let mut index = 0;
+
+    while index < 5 {
+        println!("the a[{}] value is: {}", index, a[index]);
+        index += 1;
+    }
+
+    println!("");
+
+    //for loop for looping over a collection
+    let a2 = [10,20,30,40,50];
+    for element in a2 {
+        println!("the value is: {}", element);
+    }
+    println!("");
+
+    //for loop with range
+    for number in (1..4).rev() {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF!!!");
+    println!("");
+
+    //excercise1
+    let a = [5; 10];
+    let mut sum = 0;
+    for x in a {
+        sum += x;
+    }
+    println!("{sum}");
+    
 }
