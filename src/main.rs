@@ -7,7 +7,8 @@
 // mod ch3_3_2_statement_vs_expression;
 // mod ch_3_5_1_control_flow_if;
 // mod ch_3_5_2_control_flow_loop;
-mod ch_4_1_0_ownership_pre_test;
+// mod ch_4_1_0_ownership_pre_test;
+mod ch_4_1_1_what_is_ownership;
 
 fn main() {
     println!("Rust Learning Project");
@@ -21,5 +22,6 @@ fn main() {
     // ch3_3_2_statement_vs_expression::run();
     // ch_3_5_1_control_flow_if::run();
     // ch_3_5_2_control_flow_loop::run();
-    ch_4_1_0_ownership_pre_test::run();
+    // ch_4_1_0_ownership_pre_test::run();
+    ch_4_1_1_what_is_ownership::run();
 }
