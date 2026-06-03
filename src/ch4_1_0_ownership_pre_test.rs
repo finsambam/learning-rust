@@ -1,12 +1,16 @@
 pub fn run(){
     move_ownership();
     println!("");
+
     borrowing();
     println!("");
+
     borrowing_mutable();
     println!("");
+
     mut_immut_reference();
     println!("");
+
     let s = get_string();
     println!("{}", s);
 }
@@ -17,7 +21,7 @@ fn move_ownership() {
     // let s2 = s1; // s1 is moved to s2, and s1 is no longer valid
     let _s2 = s1.clone();
 
-    println!("{}", s1); //
+    println!("{}", s1); //if s1 is moved to s2, this line will cause a compile error because s1 is no longer valid
 }
 
 // exercise borrowing with references
@@ -26,14 +30,14 @@ fn borrowing() {
 
     borrowing_print_string(&s);
 
-    println!("{}", s); //
+    println!("{}", s); // This works because s is borrowed, not moved, borrowing is use & symbol.
 }
 
 fn borrowing_print_string(s: &String) {
     println!("{}", s);
 }
 
-//excersise borrowing with mutable references
+//exercise borrowing with mutable references
 fn borrowing_mutable() {
     let mut s = String::from("hello");
 
@@ -41,6 +45,7 @@ fn borrowing_mutable() {
 
     println!("{}", s);
 }
+
 fn append_text(s: &mut String) {
     s.push_str(" world");
 }
