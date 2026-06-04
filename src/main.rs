@@ -8,7 +8,8 @@
 // mod ch3_5_1_control_flow_if;
 // mod ch3_5_2_control_flow_loop;
 // mod ch4_1_0_ownership_pre_test;
-mod ch4_1_1_what_is_ownership;
+// mod ch4_1_1_what_is_ownership;
+mod ch4_2_0_reference_and_borrowing;
 
 fn main() {
     println!("Rust Learning Project");
@@ -23,5 +24,6 @@ fn main() {
     // ch3_5_1_control_flow_if::run();
     // ch3_5_2_control_flow_loop::run();
     // ch4_1_0_ownership_pre_test::run();
-    ch4_1_1_what_is_ownership::run();
+    // ch4_1_1_what_is_ownership::run();'
+    ch4_2_0_reference_and_borrowing::run();
 }
