@@ -13,6 +13,10 @@ pub fn run() {
     scoped_mutable_borrowing(); // demonstrate mutable borrowing with scopes
 
     imutable_mutable_borrowing(); // demonstrate immutable and mutable borrowing
+
+    // dangling_reference(); // demonstrate dangling reference
+
+    not_dangling_reference(); // demonstrate how to avoid dangling reference
 }
 
 fn print_value(s: &String) {
@@ -78,4 +82,25 @@ fn imutable_mutable_borrowing() {
     let c = &mut a;
     c.push_str("borrowing!!!");
     println!("c: {}", c);
+}
+
+// fn dangling_reference() {
+//     let r;
+
+//     {
+//         let s = String::from("hello");
+//         r = &s; // r is a reference to s, but s will go out
+//     }
+//     println!("r: {}", r); // error: `s` does not live long enough, r is a dangling reference
+// }
+
+fn not_dangling_reference() {
+    let s = String::from("hello");
+
+    {
+        let r = &s;
+        println!("{}", r);
+    }
+
+    println!("{}", s);
 }
